@@ -1,0 +1,143 @@
+/* Hero Section */
+#hero {
+  max-height: 100vh;
+  margin: 0 auto; /* Center the hero section */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 5rem;
+  gap: 2rem; /* Space between elements */
+}
+
+/* Responsive Image */
+.bg {
+  max-height: 500px; /* Limit maximum image height */
+  height: auto;
+  width: 40%; /* Adjust image width for better scaling */
+  object-fit: cover; /* Maintain aspect ratio */
+  position: absolute;
+  top: 50%; /* Center vertically */
+  right: 5%; /* Position closer to the edge */
+  transform: translateY(-50%); /* Align to vertical center */
+  z-index: -1; /* Behind content */
+}
+
+/* Intro Content */
+.introContent {
+  cursor: pointer;
+  width: 50%; /* Adjust width to balance with image */
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hello {
+  margin: 1rem 0;
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+
+.introName {
+  color: rgb(198, 10, 219);
+  font-weight: bold;
+}
+
+.introPara {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.connect {
+  background: rgb(198, 10, 219);
+  color: black;
+  margin-top: 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.connect:hover {
+  background: rgb(170, 8, 189);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  #hero {
+      flex-direction: column; /* Stack content vertically */
+      text-align: center;
+      padding: 3rem 2rem;
+  }
+
+  .bg {
+      position: relative; /* Allow normal document flow */
+      width: 50%;
+      height: auto;
+      top: unset;
+      right: unset;
+      transform: none;
+      margin: 0 auto 2rem;
+  }
+
+  .introContent {
+      width: 100%; /* Take full width */
+      font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+      padding: 2rem;
+      gap: 1rem;
+  }
+
+  .introContent {
+      font-size: 2rem; /* Reduce font size */
+      width: 100%;
+  }
+
+  .hello {
+      font-size: 1.5rem;
+  }
+
+  .introPara {
+      font-size: 1rem;
+  }
+
+  .connect {
+      padding: 10px 20px; /* Smaller padding for buttons */
+      font-size: 1rem;
+  }
+
+  .bg {
+      width: 60%; /* Smaller image size */
+      margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .introContent {
+      font-size: 1.75rem; /* Further reduce for very small screens */
+  }
+
+  .bg {
+      width: 70%;
+  }
+
+  .connect {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+  }
+}
